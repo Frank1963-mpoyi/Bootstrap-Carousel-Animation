@@ -1,0 +1,213 @@
+
+
+.carousel-item {
+    background-image: url('images/ndaya.jpg');
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.photo{
+    background-image: url('images/ndaya1.jpg');
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.photo_1 {
+    background-image: url('images/ndaya2.jpg');
+    min-height: 100vh;
+    /* background-color: rgba(0,0,0,0.5); */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-item:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+.carousel-item .container{
+    background: '' ;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    text-align: center; 
+    transform: translate(-50%, -50%);
+}
+
+.carousel-item .container h2{
+    text-align: center;
+    font-size: 80px;
+    color: #ffffff;
+    margin: 0 0 10px;
+    opacity: 0;
+}
+
+.carousel-item .container p{
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    color: #eeeeee;
+    opacity: 0;
+}
+
+
+h2{
+    animation: fadeInLeft 3s ease forwards;
+
+}
+
+
+p{
+    animation: fadeInRight 3s ease forwards;
+
+}
+
+@keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+@keyframes fadeInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.carousel-controls {
+   
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    z-index: 10;
+    transform: translateX(-50%);
+
+}
+
+
+.carousel-indicators{
+    position: relative;
+    margin: 0;
+
+}
+
+.carousel-indicators li {
+    height: 70px;
+    width: 70px;
+    margin: 0 5px;
+    border-radius: 50%;
+    /* background-image: url('images/ndaya2.jpg'); */
+    background-position: center;
+    background-size: cover;
+    border: 3px solid transparent;
+    transition: all 0.3s linear;
+}
+
+.carousel-indicators li.active{
+    border-color: #ffffff;
+    transform: scale(1.2);
+}
+
+
+
+
+.carousel-indicators  .phonto {
+    background-image: url('images/ndaya.jpg');
+}
+
+.carousel-indicators  .phonto_1 {
+    background-image: url('images/ndaya1.jpg');
+}
+
+.carousel-indicators  .phonto_2 {
+    background-image: url('images/ndaya2.jpg');
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    height: 60px;
+    width: 60px;
+    /* background-color: red; */
+    opacity: 1;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev img,
+.carousel-control-next img {
+    width: 60px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover{
+    box-shadow: 0 0 30px #ffffff;
+}
+
+.carousel-control-next {
+    right: -90px;
+}
+
+.carousel-control-prev{
+    left: -90px;
+}
+
+@media(max-width: 767px){
+    .carousel-control-prev ,
+    .carousel-control-next {
+        display: none;
+    }
+
+    
+.carousel-indicators li {
+    height: 50px;
+    width: 50px;
+    
+
+}
+
+.carousel-item .container h2{
+    font-size: 45px;
+}
+
+.carousel-item .container p{
+    font-size: 22px;
+}
+
+
+}
